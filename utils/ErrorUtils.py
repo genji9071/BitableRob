@@ -1,4 +1,4 @@
 nl = '\n'
 
-def build_error(message: str, **kwargs) -> RuntimeError:
-    return RuntimeError(f'''{message}\n {' '.join(map(lambda x: f'{x}:{str(kwargs[x])}{nl}', kwargs))}''')
+def print_error(message: str, **kwargs):
+    print(f'''{message}\n {' '.join(map(lambda x: f'{x}:{str(kwargs[x])}{nl}', kwargs))}''')
