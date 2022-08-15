@@ -24,10 +24,14 @@ class Auth:
     __app_id__: Optional[str] = None
     __app_secret__: Optional[str] = None
 
-    def __new__(cls, *args, **kwargs):
+    def __new__(cls, app_id=None, app_secret=None, *args, **kwargs):
         if not Auth.__instance__:
             Auth.__instance__ = object.__new__(cls)
-            Auth.__app_id__, Auth.__app_secret__ = Auth.__loadProps__(Auth.__instance__)
+            if app_id and app_secret:
+                Auth.__app_id__ = app_id
+                Auth.__app_secret__ = app_secret
+            else:
+                Auth.__app_id__, Auth.__app_secret__ = Auth.__loadProps__(Auth.__instance__)
         return Auth.__instance__
 
     def get_tenant_access_token(self, refresh=False):

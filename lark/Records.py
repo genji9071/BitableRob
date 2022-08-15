@@ -96,6 +96,6 @@ def __fetch_records__(app_token: str,
 if __name__ == '__main__':
     # record = [{'简介': '我是新纪录','达人抖音号': 'testing'},{'简介': '我是新纪录2', '达人抖音号': 'testing2'}]
     # result = add_records("bascnt8rwQUvu85HoY81Tb0XpIf", "tbl02oxTA6WqjBO1", record)
-    records = ["recJTtRbow", "recf6vPwkT", "recsbzGZbf"]
-    result = delete_records("bascnt8rwQUvu85HoY81Tb0XpIf", "tbl02oxTA6WqjBO1", records)
+    # records = ["recJTtRbow", "recf6vPwkT", "recsbzGZbf"]
+    result = fetch_records("bascnt8rwQUvu85HoY81Tb0XpIf", "tbl02oxTA6WqjBO1", field_names='["简介"]', page_size=3)
     print(result)
