@@ -1,7 +1,9 @@
+from typing import Optional
+
 from pydantic import BaseModel
 
 
 class LarkBitableRecordItem(BaseModel):
-    id: str
+    id: Optional[str]
     record_id: str
     fields: dict
