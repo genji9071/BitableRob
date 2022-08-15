@@ -5,7 +5,7 @@
     pip install lark-bitable-sdk
 
 ## 使用方法
-    Auth(app_id="app_id", app_secret="app_secret")
+    Auth(app_id="your_app_id", app_secret="your_app_secret")
     fetch_records("app_token", "table_id", field_names='["field_name"]', page_size=3)
 
 ## 一个例子

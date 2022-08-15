@@ -31,7 +31,10 @@ class Auth:
                 Auth.__app_id__ = app_id
                 Auth.__app_secret__ = app_secret
             else:
-                Auth.__app_id__, Auth.__app_secret__ = Auth.__loadProps__(Auth.__instance__)
+                try:
+                    Auth.__app_id__, Auth.__app_secret__ = Auth.__loadProps__(Auth.__instance__)
+                except:
+                    raise ImportError('Auth was not initialized! please init it like: Auth(app_id="your_app_id", app_secret="your_app_secret")')
         return Auth.__instance__
 
     def get_tenant_access_token(self, refresh=False):
