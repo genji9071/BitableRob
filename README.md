@@ -1,5 +1,8 @@
-# BitableRob
+# lark-bitable-sdk
 飞书多维表格，关于记录增删改查相关的api
+
+## 安装方法
+    pip install lark-bitable-sdk
 
 ## 使用方法
     Auth(app_id="app_id", app_secret="app_secret")
