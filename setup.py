@@ -5,7 +5,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name="lark-bitable-sdk",
-    version="0.0.0.2",
+    version="0.0.0.3",
     description="A python-made lark bitable sdk.",
     author="Tianhao Zhang",
     author_email="genji9071@gmail.com",

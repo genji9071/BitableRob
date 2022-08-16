@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 
 from pydantic import BaseModel
 
@@ -6,23 +6,24 @@ from vo.lark.LarkBitableRecordItem import LarkBitableRecordItem
 
 
 class LarkBitableFetchRecordsResponse(BaseModel):
-    items: List[LarkBitableRecordItem]
-    page_token: str
-    has_more: bool
-    total: int
+    items: Optional[List[LarkBitableRecordItem]]
+    page_token: Optional[str]
+    has_more: Optional[bool]
+    total: Optional[int]
 
 
 class LarkBitableGetRecordResponse(BaseModel):
-    record: LarkBitableRecordItem
+    record: Optional[LarkBitableRecordItem]
 
 
 class LarkBitableGetRecordsResponse(BaseModel):
-    records: List[LarkBitableRecordItem]
+    records: Optional[List[LarkBitableRecordItem]]
 
 
 class LarkBitableDeleteRecordResponse(BaseModel):
-    deleted: bool
-    record_id: str
+    deleted: Optional[bool]
+    record_id: Optional[str]
+
 
 class LarkBitableDeleteRecordsResponse(BaseModel):
-    records: List[LarkBitableDeleteRecordResponse]
+    records: Optional[List[LarkBitableDeleteRecordResponse]]
